@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow" />
+    <title>中文字体</title>
+    <style>
+        .container {
+            width: 60%;
+            margin: 10% auto 0;
+            background-color: #f0f0f0;
+            padding: 2% 5%;
+            border-radius: 10px
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            line-height: 2.3
+        }
+
+        a {
+            color: #20a53a
+        }
+    </style>
+    <script src="/code-highlight/js/prism.js"></script>
+    <link rel="stylesheet" href="/code-highlight/css/prism.css"  />
+    <link rel="stylesheet" href="/LXGWHeartSerif/result.css" />
+    <style>
+    body {
+      font-family: "LXGW Heart Serif", sans-serif;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+    <h1>使用cdnjs.sgcd.net替换cdn.imsun.org</h1>
+    <h3></h3>
+ 
+      <h3>「霞鹜文楷」</h3>
+<pre><code class="language-html">       
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/lxgw-wenkai-screen-webfont/lxgwwenkaigbscreen.css" /&gt; 
+&lt;style&gt;
+    body {
+      font-family: "LXGW WenKai Screen", sans-serif;
+    }
+&lt;/style&gt;
+  </code></pre>
+      <h3>「霞鹜铭心宋」</h3>
+<pre><code class="language-html">       
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/LXGWHeartSerif/result.css" /&gt; 
+&lt;style&gt;
+    body {
+      font-family: "LXGW Heart Serif", sans-serif;
+    }
+&lt;/style&gt;
+  </code></pre>
+        <h3>「YaHei Consolas Hybrid」</h3>
+<pre><code class="language-html">       
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/YaHeiConsolasHybrid/result.css" /&gt; 
+&lt;style&gt;
+    body {
+      font-family: "YaHei Consolas Hybrid", sans-serif;
+    }
+&lt;/style&gt;
+  </code></pre>
+
+
+        <h3>「Xiaolai Mono SC」</h3>
+<pre><code class="language-html">       
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/XiaolaiMonoSC-Regular/result.css" /&gt; 
+&lt;style&gt;
+    body {
+      font-family: "Xiaolai Mono SC", sans-serif;
+    }
+&lt;/style&gt;
+  </code></pre>
+        <h3>「God-FangSongGBK-free」</h3>
+<pre><code class="language-html">       
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/God-FangSongGBK-free/result.css" /&gt; 
+&lt;style&gt;
+    body {
+      font-family: "God-FangSongGBK-free", sans-serif;
+    }
+&lt;/style&gt;
+  </code></pre>
+
+
+<script>Prism.highlightAll()  </script>
+</body>
+</html>
