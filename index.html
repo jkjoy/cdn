@@ -5,6 +5,9 @@
     <meta name="robots" content="noindex,nofollow" />
     <title>中文字体</title>
     <style>
+       body {
+         font-family: "Yozai Medium", sans-serif;
+        }
         .container {
             width: 60%;
             margin: 10% auto 0;
@@ -12,27 +15,18 @@
             padding: 2% 5%;
             border-radius: 10px
         }
-
         ul {
             padding-left: 20px;
         }
-
         ul li {
             line-height: 2.3
         }
-
         a {
             color: #20a53a
         }
     </style>
-    <link rel="stylesheet" href="/highlight/lines.css"  />
-    <link rel="stylesheet" href="/highlight/customemin.css"  />
+    <link rel="stylesheet" href="/highlight/prism.css"  />
     <link rel="stylesheet" href="/Yozai-Medium/result.css" />
-    <style>
-    body {
-      font-family: "Yozai Medium", sans-serif;
-    }
-  </style>
 </head>
 <body>
 <div class="container">
@@ -97,10 +91,10 @@
 &lt;/style&gt;
   </code></pre>
   <h3>「Prismjs代码高亮」</h3>
-  <pre><code class="language-html"> 
-  &lt;script src="https://cdn.imsun.org/highlight/prism.js"&lt;&lt;/script&lt;
-  &lt;link rel="stylesheet" href="https://cdn.imsun.org/highlight/prism.css"  /&lt;
-  &lt;script&lt;
+  <pre><code class="language-html">
+  &lt;script src="https://cdn.imsun.org/highlight/prism.js"&gt;&lt;/script&gt;
+  &lt;link rel="stylesheet" href="https://cdn.imsun.org/highlight/prism.css"  /&gt;
+  &lt;script&gt;
   document.addEventListener('DOMContentLoaded', function () {
     var defaultLanguage = 'javascript'; 
     document.querySelectorAll('pre code').forEach(function (block) {
@@ -110,21 +104,22 @@
     });
     Prism.highlightAll();
   });
-  &lt;/script&lt;
+  &lt;/script&gt;
 </code></pre>
-  <script src="/jquery.min.js"></script>
-    <script src="/highlight/clipboard.min.js"></script>
-    <script src="/highlight/guess.js"></script>
-   
-     <script src="/highlight/highlight.js"></script>
-
-<script>//hljs.highlightAll() 
+<h3>「highlightjs Mac」</h3>
+<code></pre>
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/highlight/lines.css"  /&gt;
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/highlight/customemin.css"  /&gt;
+&lt;script src="https://cdn.imsun.org/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.imsun.org/highlight/clipboard.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.imsun.org/highlight/guess.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdn.imsun.org/highlight/highlight.js"&gt;&lt;/script&gt;
+&lt;script&gt;//hljs.highlightAll() 
 $(document).ready(function() {
     // 高亮代码块
     $("pre code").each(function(i, block) {
         hljs.highlightBlock(block);
     });
-
     // 为代码块添加行号
     $("pre code").each(function() {
         var $codeBlock = $(this);
@@ -137,6 +132,19 @@ $(document).ready(function() {
         }
     });
 });
- </script>
+&lt;/script&gt;
+</code></pre>
+<script src="/highlight/prism.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var defaultLanguage = 'javascript'; 
+  document.querySelectorAll('pre code').forEach(function (block) {
+    if (!block.classList.length) {
+      block.classList.add('language-' + defaultLanguage);
+    }
+  });
+  Prism.highlightAll();
+});
+</script>
 </body>
 </html>
