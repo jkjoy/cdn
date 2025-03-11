@@ -51,7 +51,7 @@
 
       <h3>「霞鹜文楷」</h3>
 <pre><code class="language-html">       
-&lt;link rel="stylesheet" href="https://cdn.imsun.org/lxgw-wenkai-screen-webfont/lxgwwenkaigbscreen.css" /&gt; 
+&lt;link rel="stylesheet" href="https://cdn.imsun.org/lxgw-wenkai-screen-webfont/style.css" /&gt; 
 &lt;style&gt;
     body {
       font-family: "LXGW WenKai Screen", sans-serif;
@@ -96,6 +96,22 @@
     }
 &lt;/style&gt;
   </code></pre>
+  <h3>「Prismjs代码高亮」</h3>
+  <pre><code class="language-html"> 
+  &lt;script src="https://cdn.imsun.org/highlight/prism.js"&lt;&lt;/script&lt;
+  &lt;link rel="stylesheet" href="https://cdn.imsun.org/highlight/prism.css"  /&lt;
+  &lt;script&lt;
+  document.addEventListener('DOMContentLoaded', function () {
+    var defaultLanguage = 'javascript'; 
+    document.querySelectorAll('pre code').forEach(function (block) {
+      if (!block.classList.length) {
+        block.classList.add('language-' + defaultLanguage);
+      }
+    });
+    Prism.highlightAll();
+  });
+  &lt;/script&lt;
+</code></pre>
   <script src="/jquery.min.js"></script>
     <script src="/highlight/clipboard.min.js"></script>
     <script src="/highlight/guess.js"></script>
