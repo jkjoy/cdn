@@ -1,0 +1,52 @@
+{
+    "name": "medz/phpwind",
+    "type": "project",
+    "description": "采用PHP+MySQL方式运行的开源社区程序",
+    "keywords": ["medz", "php", "phpwind"],
+    "homepage": "http://www.phpwind.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seven Du",
+            "homepage": "http://medz.cn"
+        },
+        {
+
+            "name": "phpwind",
+            "homepage": "http://www.phpwind.net",
+            "role": "Development company"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-iconv": "*",
+        "ext-json": "*",
+        "ext-mcrypt": "*",
+        "ext-zlib": "*",
+        "ext-zip": "*",
+        "medz/windframework": "^1.0",
+        "guzzlehttp/guzzle": "^3.8"
+    },
+    "autoload": {
+        "classmap": [
+            "src/Wekit.php",
+            "src/library/",
+            "src/service/",
+            "src/bootstrap/",
+            "src/hooks/"
+        ],
+        "psr-4": {
+            "Pw\\Ext\\": "src/extensions/",
+            "Pw\\App\\": "src/applications/",
+            "Pw\\": "src/",
+            "Medz\\Wind\\Upgrade\\": "upgrade/src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
