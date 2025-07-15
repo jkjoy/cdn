@@ -30,8 +30,8 @@
 </head>
 <body>
 <div class="container">
-    <h1>可以使用cdn.imsun.pw替换cdn.imsun.org</h1>
-    <h3></h3>
+    <h1>自用加速</h1>
+    <h3>建议使用其他公益CDN加速</h3>
 
     <h3>「悠哉字体」</h3>
     <pre><code class="language-html">       
@@ -144,6 +144,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   Prism.highlightAll();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取当前域名
+    const currentDomain = window.location.hostname;
+    
+    // 如果当前域名不是 cdn.imsun.org，则替换所有相关链接
+    if (currentDomain !== 'cdn.imsun.org') {
+        // 替换 CSS 链接
+        document.querySelectorAll('link[href*="cdn.imsun.org"]').forEach(link => {
+            link.href = link.href.replace('https://cdn.imsun.org', '');
+        });
+        
+        // 替换 JS 脚本链接
+        document.querySelectorAll('script[src*="cdn.imsun.org"]').forEach(script => {
+            script.src = script.src.replace('https://cdn.imsun.org', '');
+        });
+        
+        // 替换 HTML 代码示例中的链接
+        document.querySelectorAll('code.language-html').forEach(codeBlock => {
+            codeBlock.textContent = codeBlock.textContent.replace(/cdn\.imsun\.org/g, currentDomain);
+        });
+    }
 });
 </script>
 </body>
