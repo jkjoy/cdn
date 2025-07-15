@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="noindex,nofollow" />
-    <title>中文字体</title>
+    <title>中文字体CDN</title>
     <style>
        body {
          font-family: "Yozai Medium", sans-serif;
@@ -30,7 +30,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>自用加速</h1>
+    <h1>自用CDN加速</h1>
     <h3>建议使用其他公益CDN加速</h3>
 
     <h3>「悠哉字体」</h3>
@@ -107,7 +107,7 @@
   &lt;/script&gt;
 </code></pre>
 <h3>「highlightjs Mac」</h3>
-<code><pre>
+<pre><code class="language-html">
 &lt;link rel="stylesheet" href="https://cdn.imsun.org/highlight/lines.css"  /&gt;
 &lt;link rel="stylesheet" href="https://cdn.imsun.org/highlight/customemin.css"  /&gt;
 &lt;script src="https://cdn.imsun.org/jquery.min.js"&gt;&lt;/script&gt;
@@ -151,19 +151,20 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 如果当前域名不是 cdn.imsun.org，则替换所有相关链接
     if (currentDomain !== 'cdn.imsun.org') {
-        // 替换 CSS 链接
-        document.querySelectorAll('link[href*="cdn.imsun.org"]').forEach(link => {
-            link.href = link.href.replace('https://cdn.imsun.org', '');
-        });
-        
-        // 替换 JS 脚本链接
-        document.querySelectorAll('script[src*="cdn.imsun.org"]').forEach(script => {
-            script.src = script.src.replace('https://cdn.imsun.org', '');
-        });
-        
-        // 替换 HTML 代码示例中的链接
-        document.querySelectorAll('code.language-html').forEach(codeBlock => {
+        // 替换所有代码块中的CDN链接（包括非HTML代码块）
+        document.querySelectorAll('pre code').forEach(codeBlock => {
             codeBlock.textContent = codeBlock.textContent.replace(/cdn\.imsun\.org/g, currentDomain);
+        });
+        
+        // 替换实际使用的资源链接
+        document.querySelectorAll(`
+            link[href*="cdn.imsun.org"],
+            script[src*="cdn.imsun.org"],
+            img[src*="cdn.imsun.org"],
+            source[src*="cdn.imsun.org"]
+        `).forEach(el => {
+            if (el.href) el.href = el.href.replace('https://cdn.imsun.org', '');
+            if (el.src) el.src = el.src.replace('https://cdn.imsun.org', '');
         });
     }
 });
